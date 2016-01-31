@@ -55,6 +55,13 @@ public class Food implements Serializable{
     }
 
     @Override
+    public String toString() {
+        return "Food{" + "fruit=" + fruit + ", vegetable=" + vegetable + ", water=" + water + '}';
+    }
+    
+    
+
+    @Override
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;

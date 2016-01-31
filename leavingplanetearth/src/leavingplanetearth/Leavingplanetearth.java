@@ -5,6 +5,8 @@
  */
 package leavingplanetearth;
 
+import byui.cit260.LeavingPlanetEarth.LoweBingham.Food;
+
 /**
  *
  * @author Curtis
@@ -15,7 +17,11 @@ public class Leavingplanetearth {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Food fruit = new Fruit();
+        
+        fruit.setFruit(4);
+        
+        
     }
     
 }
