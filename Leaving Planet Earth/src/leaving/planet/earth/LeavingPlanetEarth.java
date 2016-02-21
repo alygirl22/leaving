@@ -5,7 +5,10 @@
  */
 package leaving.planet.earth;
 
+import byui.cit260.LeavingPlanetEarth.LoweBingham.Game;
 import byui.cit260.LeavingPlanetEarth.LoweBingham.Player;
+import citbyui.cit260.LeavingPlanetEarth.view.StartProgramView;
+
 
 /**
  *
@@ -13,17 +16,29 @@ import byui.cit260.LeavingPlanetEarth.LoweBingham.Player;
  */
 public class LeavingPlanetEarth {
 
+    private static Game currentGame = null;
+    private static Player player = null;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Player playerOne = new Player();
         
-        playerOne.setName("Clark Kent");
-        playerOne.setBestTime(8.00);
-        
-        String playerInfo = playerOne.toString();
-        System.out.println(playerInfo);
+        //create StartProgramViewOrig and display the start program view
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
+    }
+     
+    public static Game getCurrentGame() {
+        return currentGame;
     }
     
+    public static void setCurrentGame(Game currentGame){
+        LeavingPlanetEarth.currentGame = currentGame;
+    }
+    public static Player getPlayer() {
+        return player;
+    }
+    public static void setPlayer(Player player){
+        LeavingPlanetEarth.player = player;
+    }
 }
