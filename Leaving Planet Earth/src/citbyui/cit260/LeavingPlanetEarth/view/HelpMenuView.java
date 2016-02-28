@@ -12,13 +12,13 @@ import leaving.planet.earth.LeavingPlanetEarth;
  *
  * @author aly_cheers17
  */
-public class MainMenuView {
-    private String menu;
+public class HelpMenuView {
+       private String menu;
 
     /**
      * displays the start program view
      */
-    public void displayMainMenuView() {
+    public void displayHelpMenuView() {
         
         boolean done = false; // set flag to not done
         do {
@@ -39,17 +39,20 @@ public class MainMenuView {
         choice = choice.toUpperCase(); //convert choice to upper case
         
         switch (choice) {
-            case "N": // create and start a new game
-                this.startNewGame();
+            case "O": // objective of the game
+                this.displayObjective();
                 break;
-            case "G": // get and start an existing game
-                this.startExistingGame();
+            case "M": // show moves in game
+                this.displayMove();
                 break;
-            case "H": // display the help menu
-                this.displayHelpMenu();
+            case "B": // display how to build shelter
+                this.displayBuildShelter();
                 break;
-            case "S": // save the current game
-                this.saveGame();
+            case "F": // display how to get food and tools for game
+                this.displayHowToFindPieces();
+                break;
+            case "R": // display main menu
+                this.displayMainMenu();
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
@@ -57,21 +60,24 @@ public class MainMenuView {
         }
         return true;
     }
-   private void startNewGame() {
+   private void displayObjective() {
         GameControl.createNewGame(LeavingPlanetEarth.getPlayer());
         
         // display the game menu
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayMenu();
     }
-    private void startExistingGame() {
+    private void displayMove() {
         System.out.println("*** startExistingGame function called ***");
     }
-    private void saveGame() {
+    private void displayBuildShelter() {
         System.out.println("*** startExistingGame function called ***");
     }
-    private void displayHelpMenu() {
+    private void displayHowToFindPieces() {
         System.out.println("*** displayHelpMenu function called ***");
+    }
+    private void displayMainMenu() {
+        System.out.println("*** displayMainMenu function called ***");
     }
    
 
@@ -79,19 +85,15 @@ public class MainMenuView {
         System.out.println("\n*** getMenuOption() function called ***");
         return "N";
     }
-   public MainMenuView() {
+   public HelpMenuView() {
        this.menu = "\n"
                  + "\n--------------------------------"
-                 + "\n| Main Menu                    |"
+                 + "\n| Help Menu                     |"
                  + "\n--------------------------------"
-                 + "\nN - Start new game"
-                 + "\nG - Get and start saved game"
-                 + "\nH - Get help on how to play the game"
-                 + "\nS - Save game"
-                 + "\nQ - Quit"
+                 + "\nO - Objective of the game"
+                 + "\nM - How to move in the game"
+                 + "\nF - How to find pieces of the rocket"
+                 + "\nR - Return to main menu"
                  + "\n--------------------------------";
    }
-   
-   }
-    
-
+}
