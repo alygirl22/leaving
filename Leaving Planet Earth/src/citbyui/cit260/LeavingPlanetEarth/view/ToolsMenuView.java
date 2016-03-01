@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.LeavingPlanetEarth.view;
+package citbyui.cit260.LeavingPlanetEarth.view;
 
 /**
  *
