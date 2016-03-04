@@ -12,29 +12,14 @@ import leaving.planet.earth.LeavingPlanetEarth;
  *
  * @author aly_cheers17
  */
-public class MainMenuView {
-    private String menu;
+public class MainMenuView extends View {
+    
 
     /**
      * displays the start program view
      */
-    public void displayMainMenuView() {
-        
-        boolean done = false; // set flag to not done
-        do {
-            //prompt for and get players name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-                return; // exit the game
-            
-            // do the requested action and display the next view
-            done = this.doAction(menuOption);
-            
-            } while (!done); 
-        }
-    
-
-    public boolean doAction(String choice) {
+        @Override
+        public boolean doAction(String choice) {
         
         choice = choice.toUpperCase(); //convert choice to upper case
         
@@ -80,7 +65,7 @@ public class MainMenuView {
         return "N";
     }
    public MainMenuView() {
-       this.menu = "\n"
+            super("\n"
                  + "\n--------------------------------"
                  + "\n| Main Menu                    |"
                  + "\n--------------------------------"
@@ -89,7 +74,7 @@ public class MainMenuView {
                  + "\nH - Get help on how to play the game"
                  + "\nS - Save game"
                  + "\nQ - Quit"
-                 + "\n--------------------------------";
+                 + "\n--------------------------------");
    }
    
    }

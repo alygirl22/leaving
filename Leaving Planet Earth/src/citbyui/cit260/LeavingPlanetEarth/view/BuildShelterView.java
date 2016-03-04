@@ -56,7 +56,7 @@ public class BuildShelterView {
     private String getResources() {
 
         Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = ""; // player's resources to be returned
+        String value = null; // player's resources to be returned
         boolean valid = false; //initialize to not valid
 
         while (!valid) { // loop while an invalid value is enter

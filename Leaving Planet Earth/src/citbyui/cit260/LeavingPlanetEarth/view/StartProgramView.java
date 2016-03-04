@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * @author aly_cheers17
  */
-public class StartProgramView {
+public class StartProgramView extends View {
 
     private String promptMessage;
 
@@ -102,7 +102,7 @@ public class StartProgramView {
         MainMenuView mainMenuView = new MainMenuView();
 
         // Display the main menu view
-        mainMenuView.displayMainMenuView();
+        mainMenuView.display();
     }
 
     private static class player {
