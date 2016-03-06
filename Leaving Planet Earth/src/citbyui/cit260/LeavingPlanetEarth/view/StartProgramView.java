@@ -7,18 +7,19 @@ import java.util.Scanner;
 /**
  * @author aly_cheers17
  */
-ppublic class StartProgramView implements ViewInterface {
+public class StartProgramView extends View {
 
- 
+    private String promptMessage;
+
     public StartProgramView() {
+
+        this.promptMessage = "\nPlease enter your name:";
+        // display the banner when view is created
+        this.displayBanner();
     }
 
-    public void display() {
-        this.displayBanner(); //display the introductory banner message
-        String playersName = this.getInput();
-        this.doAction(playersName);
-    }
-    public void displayBanner(){
+    private void displayBanner() {
+
         System.out.println(
                 "\n**********************************************"
                 + "\n* Welcome to Leaving Planet Earth.           *"
@@ -30,15 +31,9 @@ ppublic class StartProgramView implements ViewInterface {
                 + "\n* build your own rocket ship, and travel     *"
                 + "\n* to a new planet for a new life. Good luck! *"
                 + "\n**********************************************"
-                + "\nPlease enter your name:"
         );
     }
 
-    public String getInput() {
-        
-    }
-    
-    
     public void displayStartProgramView() {
 
         boolean done = false; // set flag to not done

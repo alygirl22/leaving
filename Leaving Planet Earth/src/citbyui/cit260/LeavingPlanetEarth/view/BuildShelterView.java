@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Curtis
  */
-public class BuildShelterView extends View {
+public class BuildShelterView {
     
     private String promptMessage;
 
@@ -73,8 +73,7 @@ public class BuildShelterView extends View {
         }
         return value; // return the value entered
     }
-    
-    @Override
+
     private boolean doAction(String resources) {
 
         if (resources.length() < 10 || resources.length() > 36 ) {
